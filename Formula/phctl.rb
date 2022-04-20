@@ -5,20 +5,20 @@
 class Phctl < Formula
   desc ""
   homepage "https://example.com"
-  version "1.2.0"
+  version "1.2.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/phoban01/myapp/releases/download/v1.2.0/phctl_Darwin_arm64.tar.gz"
-      sha256 "a4b6e0d865c880e5592e4d84d60044b55c8df9397c03a2d331e22660b2f3cb34"
+    if Hardware::CPU.intel?
+      url "https://github.com/phoban01/myapp/releases/download/v1.2.1/phctl_Darwin_amd64.tar.gz"
+      sha256 "76249f686f50bb1cb9d9aa1856001173addf2b0d2de1fb37bcefcaf7affbc95a"
 
       def install
         bin.install "phctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/phoban01/myapp/releases/download/v1.2.0/phctl_Darwin_amd64.tar.gz"
-      sha256 "33391e6d2f986400b7b9a377dd522f9629d251f2314e895fa69947696cd13fa4"
+    if Hardware::CPU.arm?
+      url "https://github.com/phoban01/myapp/releases/download/v1.2.1/phctl_Darwin_arm64.tar.gz"
+      sha256 "2d798658ce2464c0181fa8d4c804e3ab1e7b2ac7105b4e8b357418016d753d5a"
 
       def install
         bin.install "phctl"
@@ -28,24 +28,24 @@ class Phctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/phoban01/myapp/releases/download/v1.2.0/phctl_Linux_armv6.tar.gz"
-      sha256 "cdb99189c0d5444333650b71e97f1b93a2f5f543007e498289a9c728c759394b"
+      url "https://github.com/phoban01/myapp/releases/download/v1.2.1/phctl_Linux_armv6.tar.gz"
+      sha256 "2224ca99844b68fc82104856cd7073dbcfbe862477e7206c3496d40d72466506"
 
       def install
         bin.install "phctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/phoban01/myapp/releases/download/v1.2.0/phctl_Linux_arm64.tar.gz"
-      sha256 "ca434633140fcd1a875a52b025f6f844a858cf931703d3781f4a038c2507ad9e"
+      url "https://github.com/phoban01/myapp/releases/download/v1.2.1/phctl_Linux_arm64.tar.gz"
+      sha256 "9093109d6f51d5168d04845438b0f471b91f946e2d12048dbf85c536544ab599"
 
       def install
         bin.install "phctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/phoban01/myapp/releases/download/v1.2.0/phctl_Linux_amd64.tar.gz"
-      sha256 "1dace6bbd029a2534e2c243440eefd19e89e9267c804c7603097456993172623"
+      url "https://github.com/phoban01/myapp/releases/download/v1.2.1/phctl_Linux_amd64.tar.gz"
+      sha256 "3d377c770ccb75fc16b6ff7b228ab9c0f4d2d63ab33814fcdf4be09f251104ec"
 
       def install
         bin.install "phctl"
